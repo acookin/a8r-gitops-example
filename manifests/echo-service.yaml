@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: echo-server
   namespace: gitops-demo
+  labels:
+    sup: hi
 spec:
   replicas: 1
   selector:
