@@ -9,6 +9,16 @@ spec:
   prefix: /backend/
   service: quote
 ---
+apiVersion: x.getambassador.io/v3alpha1
+kind: AmbassadorMapping
+metadata:
+  name: quote-backend-other
+  namespace: gitops-demo
+spec:
+  hostname: "*"
+  prefix: /backend-other/
+  service: quote
+---
 apiVersion: v1
 kind: Service
 metadata:
